@@ -146,3 +146,6 @@ color: whitesmoke;
 text-align: center;
 }
  
+input{
+    border: solid ;
+}
