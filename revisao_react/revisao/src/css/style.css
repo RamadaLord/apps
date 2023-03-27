@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ body{
+    font-size: 1em;
+    font-family: Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://www.brookings.edu/wp-content/uploads/2022/01/shutterstock_1145553203_small.jpg"); 
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(46, 46, 58); 
+    padding: 15px;
+    align-items: center;
+    opacity: 88%;
+}
+
+.img{
+    width: 660px;
+}
+
+h1{
+    color: blueviolet;
+    font-size: 2.5em;
+}
+
+h2{
+    color: blueviolet;
+}
+
+.area-logo img{
+
+    padding: 15px;
+    width: 200px; 
+   
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: blueviolet;
+    padding: 30px;
+    transition: 0.5s all;
+}
+
+.menu a:link, a:visited{
+ color: blueviolet;
+ border-style: hidden;
+}
+
+.menu a:hover{
+    text-decoration: double;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.5s all;
+}
+
+
+.menu{
+    text-align: center;
+    background-color:rgb(46, 46, 58) ;
+    font-size: 20px;
+    padding: 10px;
+    opacity: 88%;
+}
+
+#area-principal{
+    width: 660px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgb(20, 75, 75);
+    opacity: 88%;
+    margin-bottom: 10px;
+ 
+}
+
+.area-postagens {
+    
+    width: 660px;
+    margin-bottom: 20px;
+    color:whitesmoke;
+   
+}
+
+.postagem{
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 75, 75) ;
+    opacity: 88%;
+    text-align: left;
+    margin: 0 auto;
+    list-style: inside;
+    width: 660px;
+    content: "★";
+    color: whitesmoke;
+   
+}
+
+#rodape {
+    text-align: right;
+    color: blueviolet;
+    opacity: 80%;
+    position:relative;
+    
+}
+
+button{
+    border-radius: 15px;
+   transition: 0.5s all;
+   /* background-image: url("tec1.jpg"); */
+   color: whitesmoke;
+   border:  1px;
+}
+
+button:hover{
+    cursor: pointer;
+    transition: 0.5s all;
+    text-decoration: solid;
+}
+
+.area-loja{
+  
+    display: grid;
+    grid-template-columns: 220px 220px 220px ;
+   background-color: rgb(20, 75, 75);
+   
+}
+
+.img-pc{
+    width: 150px;
+}
+
+.area-vendas{
+    background-color:rgb(20, 75, 75) ;
+}
+
+.texts{
+color: whitesmoke;
+text-align: center;
+}
+ 
