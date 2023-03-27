@@ -76,6 +76,7 @@ h2{
     background-color: rgb(20, 75, 75);
     opacity: 88%;
     margin-bottom: 10px;
+    text-align: center;
  
 }
 
@@ -110,17 +111,18 @@ h2{
 }
 
 button{
-    border-radius: 15px;
+    /* border-radius: 15px; */
    transition: 0.5s all;
-   /* background-image: url("tec1.jpg"); */
-   color: whitesmoke;
-   border:  1px;
+     /* background-image: url("../../src/Components/Header/G4CLogo.png");  */
+   /* color: whitesmoke;
+   border:  1px; */
 }
 
 button:hover{
     cursor: pointer;
     transition: 0.5s all;
     text-decoration: solid;
+    font-size: 15px;
 }
 
 .area-loja{
