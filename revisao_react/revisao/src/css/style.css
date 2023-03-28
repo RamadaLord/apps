@@ -41,6 +41,13 @@ h2{
     
 }
 
+.menu{
+    text-align: center;
+    background-color:rgb(46, 46, 58) ;
+    font-size: 20px;
+    padding: 10px;
+    opacity: 88%;
+}
 .menu a{
     text-decoration: none;
     color: blueviolet;
@@ -61,13 +68,6 @@ h2{
 }
 
 
-.menu{
-    text-align: center;
-    background-color:rgb(46, 46, 58) ;
-    font-size: 20px;
-    padding: 10px;
-    opacity: 88%;
-}
 
 #area-principal{
     width: 660px;
@@ -106,7 +106,7 @@ h2{
     text-align: right;
     color: blueviolet;
     opacity: 80%;
-    position:relative;
+    position:fixed;
     
 }
 
