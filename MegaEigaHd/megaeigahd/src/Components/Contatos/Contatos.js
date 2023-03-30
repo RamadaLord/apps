@@ -19,7 +19,7 @@ class Cadastro extends Component {
         const { nome, email, senha, sexo, preferencia } = this.state
         if (nome === '' || email === '' || senha === '' || sexo === '') {
             alert('!!CAMPOS EM BRANCO!!')
-            return
+            return;
         }
         alert(`Nome: ${nome} \nEmail: ${email} \nSenha: ${senha} \n Sexo: ${sexo} \nPreferencia: ${preferencia}`)
     }

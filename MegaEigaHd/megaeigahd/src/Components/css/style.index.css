@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  
+
 }
 
 body {
   font-size: 1em;
   font-family: Tahoma, sans-serif;
-  background-image: url("../../Filmes.jpg");
+  background-image: url("../../img//Filmes.jpg");
   background-size: cover;
 }
 
@@ -34,6 +34,7 @@ body {
   padding: 10px;
   opacity: 88%;
   transition: 0.5s all ease-in-out;
+  
 }
 
 .menu a {
@@ -41,12 +42,20 @@ body {
   color: blueviolet;
   padding: 30px;
   transition: 0.75s all;
+  
 }
+/*dropdown*/
 
 .dropdown {
   position: relative;
   display: inline-block;
   transition: 0.75s all ease-in-out;
+  
+}
+
+.dropdown:hover .drop {
+  transition: 0.75s all;
+  display: block;
 }
 
 .drop {
@@ -60,6 +69,8 @@ body {
   transition: 2s;
   border-radius: 10px;
   width: 180px;
+  
+  
 }
 
 .drop a {
@@ -70,6 +81,7 @@ body {
   text-align: left;
   transition: 0.75s all ease;
   border-radius: 30px;
+  
 
 }
 
@@ -77,19 +89,14 @@ body {
   cursor: pointer;
   animation-duration: 2s;
   background-color: none;
-  transition: 0.75s all;
+  transition:0.75s all;
   background-color: aqua;
-
-
-}
-
-.dropdown:hover .drop {
-  transition: 0.75s all;
-  display: block;
+  
 
 }
+
+
 
 img {
   width: 300px;
 }
-
