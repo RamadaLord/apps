@@ -1,12 +1,8 @@
-import Header from './Components/Header/Header'
+import Rotas from './Routes'
 import '../src/Components/css/style.index.css'
 function App() {
   return (
-    <div>
-      <h1>
-        <Header />
-      </h1>
-    </div>
+    <Rotas />
   )
 }
 export default App

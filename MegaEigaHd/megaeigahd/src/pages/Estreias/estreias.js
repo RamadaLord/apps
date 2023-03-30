@@ -1,8 +1,9 @@
-export default function Estreias (){
+export default function Estreias(){
+    return(
     <div>
         <h1>
             Estreias
         </h1>
-        <img></img>
     </div>
+    )
 }
