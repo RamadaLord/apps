@@ -4,17 +4,19 @@ import Contatos from '../Contatos/cadastro'
 import Home from '../Home/Home'
 export default function Header() {
     return (
-        <div>
-            <header class="cabecalho">
+        <div className='container-fluid'>
+            <div class="cabecalho">
                 <div class="area-logo">
                     <img src={Image} alt={Image} />
                 </div>
                 <div class="area-texto">
                     <h1>MegaEigaHD</h1>
                 </div>
-            </header>
+            </div>
             <div class="menu">
-            <Home />
+            <Link className='link' to='/'>Home</Link>
+                </div>
+            <div class="menu">
                 <div className="dropdown">
                     <a href="#">Filmes</a>
                     <div className="drop">

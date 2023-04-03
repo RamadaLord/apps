@@ -1,18 +1,53 @@
-import { Component } from 'react';
-import {Button} from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
+import Image from '../../img/Avatar.jpg'
+import Image2 from '../../img/Enrolados.jpg'
+import Image3 from '../../img/O_hobbit.jpg'
 
-class Bootstrap extends Component(){
+function UncontrolledExample() {
+  return (
+    <Carousel className='Carousel'>
+      <Carousel.Item className='Carousel-item'>
+        <img
+          className="C-Image"
+          src={Image}
+          alt={Image}
+        />
+        <Carousel.Caption>
+          <h3>Avatar</h3>
+          <p>Um filme vencedor dos oscars.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className='Carousel-item'>
+        <img
+          className="C-Image"
+          src={Image2}
+          alt={Image2}
+        />
 
-    render( ){
-        return(
-            <div>
-                <h1>
-                    a
-                </h1>
-            </div>
-        )
-    }
+        <Carousel.Caption>
+          <h3>Enrolados</h3>
+          <p>Uma otima animação infantil.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="C-Image"
+          src={Image3}
+          alt={Image3}
+        />
+
+        <Carousel.Caption>
+          <h3>Hobbit</h3>
+          <p>
+           Uma otima pedida para uma boa noite de sono.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
 }
 
+export default UncontrolledExample;
 
-export default Bootstrap
+
+

@@ -28,8 +28,10 @@ class Cadastro extends Component {
             <div id="area-principal">
                 <form onSubmit={this.cadastro}>
 
+
                     <label>Nome:</label>
                     <input type="text"
+                    id="Input"
                         placeholder="Seu Nome Aqui"
                         value={this.state.nome}
                         onChange={(e) => this.setState({ nome: e.target.value })}
@@ -37,6 +39,7 @@ class Cadastro extends Component {
                     <br />
                     <label>E-mail:</label>
                     <input type='email'
+                    id="Input"
                         value={this.state.email}
                         placeholder="E-mail"
                         onChange={(e) => this.setState({ email: e.target.value })}
@@ -44,6 +47,7 @@ class Cadastro extends Component {
                     <br />
                     <label>Senha:</label>
                     <input type='password'
+                    id="Input"
                         value={this.state.senha}
                         placeholder="*****"
                         onChange={(e) => this.setState({ senha: e.target.value })}
@@ -53,9 +57,11 @@ class Cadastro extends Component {
                         onChange={(e) => this.setState({ preferencia: e.target.value })}>
                         <legend>Preferencia?</legend>
                         <label>
-                            <input type="radio" name="Preferencia" value="Filmes"  />Filmes</label>
+                            <input type="radio" name="Preferencia" value="Filmes"  />
+                            Filmes</label>
                         <label>
-                            <input type="radio" name="Preferencia" value="Series" />Series</label>
+                            <input type="radio" name="Preferencia" value="Series" />
+                            Series</label>
                     </fieldset>
                     <label>Selecione Seu Genero</label>
                     <br />
