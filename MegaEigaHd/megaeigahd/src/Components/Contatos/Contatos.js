@@ -70,8 +70,8 @@ class Cadastro extends Component {
                         onChange={(e) => this.setState({ sexo: e.target.value })}
                     >
                         <option>Selecionar</option>
-                        <option value="Masc">Masculino</option>
-                        <option value="Fem">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
                     </select>
                     <br />
                     <button type='submit'>Enviar</button>

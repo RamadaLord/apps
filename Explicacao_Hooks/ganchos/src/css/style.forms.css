@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    display: flex;
+    justify-content: center;
+    background-color: yellowgreen;
+ }
+
+#Principal{
+   
+    text-align: center;
+}
+
+form {
+    border: 1px solid rgb(63, 24, 206);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 1px 5px black;
+    background-color: burlywood;
+    padding: 5px;
+    margin: 5px;
+}
+
+.botao{
+    text-align: center;
+    /* border: solid red 1px; */
+    /* background-color: blueviolet; */
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s all;
+}
+
+.botao button{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.botao p{
+    font-family: 'Times New Roman', Times, serif;
+}
