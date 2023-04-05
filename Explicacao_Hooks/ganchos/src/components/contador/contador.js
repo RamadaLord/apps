@@ -19,6 +19,11 @@ export default function Mudar() {
     }
     setValor(valor - 1);
   }
+
+  function alerta(){
+    alert(valor)
+  }
+
   return (
     <div className="botao">
       <button onClick={aumentar}>+</button>
