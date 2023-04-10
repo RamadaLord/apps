@@ -43,6 +43,10 @@ body {
   z-index: -1;
 }
 
+.Carousel:hover{
+  z-index: 1;
+}
+
 .Carousel-item {
   position: relative;
   width: 100%;
@@ -159,7 +163,7 @@ body {
 
 .imge3 {
 
-  box-shadow: 12px 12px 12px 12px rgb(160, 9, 197);
+  box-shadow: 2px 12px 12px 12px rgb(160, 9, 197);
 }
 
 .img {
@@ -179,6 +183,10 @@ body {
 }
 .img:hover{
   transform:scale(1.0);
+}
+
+.img1{
+  width: 500px;
 }
 
 /* .imega {
