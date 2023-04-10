@@ -84,10 +84,17 @@ body {
 
 /*dropdown*/
 
+
+
 .dropdown {
   position: relative;
   display: inline-block;
-  transition: 0.75s all ease-in-out;
+  transition: 0.75s border-top;
+  
+}
+
+.dropdown *> {
+  transition: 1.5s all;
 }
 
 .dropdown:hover .drop {
@@ -103,7 +110,7 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   animation-duration: 2s;
-  transition: 2s;
+  transition: 2s border-top;
   border-radius: 10px;
   width: 200px;
   /* border: 1px solid red; */
@@ -142,6 +149,7 @@ body {
 .imge1 {
   /* border: 1px red solid; */
   box-shadow: 0 10px 10px 12px rgb(240, 5, 5);
+  
 }
 
 .imge2 {
@@ -163,8 +171,14 @@ body {
 }
 
 .img img {
+
   width: 100px;
   height: 100px;
+  margin: 1px;
+  padding: 1px;
+}
+.img:hover{
+  transform:scale(1.0);
 }
 
 /* .imega {
