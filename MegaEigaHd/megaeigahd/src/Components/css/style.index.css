@@ -10,7 +10,8 @@ body {
   font-size: 1em;
   font-family: Tahoma, sans-serif;
   background-image: url("../../img//Filmes.jpg");
-  background-size: cover;
+  /* background-size: cover; */
+  background-repeat: repeat;
 }
 
 /*Header*/
@@ -24,6 +25,52 @@ body {
   opacity: 97%;
   color: blueviolet;
 }
+
+
+/*apis*/
+.api-content{
+  display: grid;
+  grid-template-columns: auto auto auto;  
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  gap: 50px;
+}
+
+.img-api{
+  box-shadow: 10px 5px 16px 20px rgb(46, 46, 58);
+  z-index: -2;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.api-api{
+  color: blueviolet;
+  float: left;
+  border: 3px black solid;
+  background-color: rgb(46, 46, 58);
+  width: 406px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px ;
+}
+
+
+.des{
+  display: flex;
+  color: blueviolet;
+  background-color: rgb(46, 46, 58) ;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 406px;
+  text-decoration: none;
+  border: 3px black solid;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px ;
+}
+
+/*Menu*/
+
 
 .area-logo img {
   padding: 15px;
@@ -91,7 +138,7 @@ body {
 
 
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
   transition: 0.75s border-top;
   
@@ -99,6 +146,7 @@ body {
 
 .dropdown *> {
   transition: 1.5s all;
+  position: absolute;
 }
 
 .dropdown:hover .drop {
@@ -109,7 +157,7 @@ body {
 
 .drop {
   display: none;
-  position: relative;
+  position: absolute;
   background-color: blueviolet;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -117,6 +165,7 @@ body {
   transition: 2s border-top;
   border-radius: 10px;
   width: 200px;
+  z-index: 1;
   /* border: 1px solid red; */
 }
 
@@ -149,10 +198,9 @@ body {
 /*Imagens*/
 
 
-
 .imge1 {
   /* border: 1px red solid; */
-  box-shadow: 0 10px 10px 12px rgb(240, 5, 5);
+  box-shadow: 10px 10px 15px 12px rgb(240, 5, 5);
   
 }
 

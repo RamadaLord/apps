@@ -1,6 +1,7 @@
 import Image from "../../img/O_hobbit.jpg";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+import { Link } from 'react-router-dom'
 
 export default function Emcartaz() {
   //array de string vazia//
@@ -22,16 +23,23 @@ export default function Emcartaz() {
   console.log(filmes);
 
   return (
-    <div>
-      <h1>Em cartaz</h1>
+    <div className="api-content">
       {filmes.map((filmes) => {
         return (
-          <article>
-            <strong>{filmes.backdrop_path}</strong>
-          </article>
+          <div>
+            <article>
+              <strong className="api-api">{filmes.title}</strong>
+              <img
+                className="img-api"
+                src={`https://image.tmdb.org/t/p/w400/${filmes.poster_path}`}
+                alt={filmes.tittle}
+              />
+              <Link className="des" to={`/detalhes/${filmes.id}`}>Detalhes</Link>
+            </article>
+          </div>
         );
       })}
-      {/* <img className="img1" src={Image} alt={Image} /> */}
+      
     </div>
   );
 }
