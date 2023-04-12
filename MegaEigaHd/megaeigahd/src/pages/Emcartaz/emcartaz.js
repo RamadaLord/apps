@@ -1,10 +1,9 @@
-import Image from "../../img/O_hobbit.jpg";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom'
 
 export default function Emcartaz() {
-  //array de string vazia//
+                                                     //array de string vazia//
   const [filmes, setFilmes] = useState([""]);
 
   useEffect(() => {
@@ -12,7 +11,7 @@ export default function Emcartaz() {
       const response = await api.get("/movie/now_playing", {
         params: {
           api_key: "35f672447b37987d3a6ab0b0adf8cc96",
-          language: "pt-br",
+          language: "en",
         },
       });
       setFilmes(response.data.results);
@@ -34,7 +33,7 @@ export default function Emcartaz() {
                 src={`https://image.tmdb.org/t/p/w400/${filmes.poster_path}`}
                 alt={filmes.tittle}
               />
-              <Link className="des" to={`/detalhes/${filmes.id}`}>Detalhes</Link>
+              <Link className="des" to={`/Detalhes/${filmes.id}`}>Detalhes</Link>
             </article>
           </div>
         );
