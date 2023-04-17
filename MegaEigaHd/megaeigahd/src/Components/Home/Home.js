@@ -14,6 +14,8 @@ export default function Home() {
       <div className="imega">
         <UncontrolledExample />
       </div>
+      <div className="api-api">
+
       <div className="img">
         <div className="imge1">
           <Link to="https://www.primevideo.com/">
@@ -38,6 +40,7 @@ export default function Home() {
           <Link to="https://globoplay.globo.com">
             <img src={ImageG} alt={ImageG} />
           </Link>
+      </div>
         </div>
       </div>
     </div>

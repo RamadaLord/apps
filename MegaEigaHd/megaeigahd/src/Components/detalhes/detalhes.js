@@ -31,7 +31,7 @@ export default function Detalhes(){
                 Popularity: 
                  {filmes.popularity}
                 <br/>
-                TMDB: 
+                TMDB: ★
                  {filmes.vote_average}
                 </h1>
             <div className="api-api" >
