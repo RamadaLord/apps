@@ -246,3 +246,23 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+
+.Cartaz{
+  border: 3px solid white;
+  background-color: aqua;
+  justify-content: center;
+  text-align: center;
+}
+
+.des2{
+  display: flex;
+  color: blueviolet;
+  background-color: rgb(46, 46, 58) ;
+  justify-content: center;
+  border: solid black 3px;
+  border-radius: 10px;
+  opacity: 97%;
+  width: 406px;
+  text-decoration: none;
+  z-index: -1;
+}

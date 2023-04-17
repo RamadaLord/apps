@@ -33,6 +33,7 @@ export default function Emcartaz() {
                 src={`https://image.tmdb.org/t/p/w400/${filmes.poster_path}`}
                 alt={filmes.tittle}
               />
+              {/* <strong className="api-api">{filmes.overview}</strong> */}
               <Link className="des" to={`/Detalhes/${filmes.id}`}>Detalhes</Link>
             </article>
           </div>
