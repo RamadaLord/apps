@@ -15,8 +15,10 @@
 .F-img{
     width:6rem;
     height: 6rem;
+    transition: 0.5s all;
 }
 
 .F-img:hover{
     scale: 1.1;
+    transition: 0.5s all;
 }

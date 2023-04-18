@@ -41,6 +41,7 @@ body {
   box-shadow: 10px 5px 16px 20px rgb(46, 46, 58);
   z-index: -2;
   border: 3px solid rgb(0, 0, 0);
+  width: 406px;
 }
 
 .api-api{
@@ -49,6 +50,7 @@ body {
   border: 3px black solid;
   background-color: rgb(46, 46, 58);
   width: 406px;
+  /* height: auto; */
   text-align: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px ;
@@ -82,11 +84,12 @@ body {
 .Carousel {
   left: -19%;
   position: relative;
-  margin-left: 300px;
+  margin-left: 30rem;
   width: 900px;
   opacity: 98%;
   height: 800px;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   z-index: -1;
 }
 
@@ -217,8 +220,9 @@ body {
 .img {
   padding: 10px;
   margin: 10px;
-
-  /* border: 1px solid red; */
+  background-color: blueviolet;
+  border: 10px solid red;
+  transition: 0.5s all;
 
 }
 
@@ -228,24 +232,31 @@ body {
   height: 100px;
   margin: 1px;
   padding: 1px;
+  transition: 0.5s all;
 }
 .image1:hover{
   transform:scale(1.1);
+  transition: 0.5s all;
 }
 .image2:hover{
   transform:scale(1.1);
+  transition: 0.5s all;
 }
 .image3:hover{
   transform:scale(1.1);
+  transition: 0.5s all;
 }
 .image4:hover{
   transform:scale(1.1);
+  transition: 0.5s all;
 }
 .image5:hover{
   transform:scale(1.1);
+  transition: 0.5s all;
 }
 .image6:hover{
   transform:scale(1.1);
+  transition: 0.5s all;
 }
 
 .img1{
