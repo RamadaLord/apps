@@ -229,7 +229,22 @@ body {
   margin: 1px;
   padding: 1px;
 }
-.img:hover{
+.image1:hover{
+  transform:scale(1.1);
+}
+.image2:hover{
+  transform:scale(1.1);
+}
+.image3:hover{
+  transform:scale(1.1);
+}
+.image4:hover{
+  transform:scale(1.1);
+}
+.image5:hover{
+  transform:scale(1.1);
+}
+.image6:hover{
   transform:scale(1.1);
 }
 
@@ -265,4 +280,6 @@ body {
   width: 406px;
   text-decoration: none;
   z-index: -1;
+  padding: 10px;
+  margin: 10px;
 }

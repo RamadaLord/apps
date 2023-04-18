@@ -1,10 +1,11 @@
 import Image from '../../favicon.png'
 import { Link } from 'react-router-dom'
 import Contatos from '../Contatos/cadastro'
-import Home from '../Home/Home'
+
 export default function Header() {
     return (
-        <div className='container-fluid'>
+        <div>
+             {/* className='container-fluid' */}
             <div class="cabecalho">
                 <div class="area-logo">
                     <img src={Image} alt={Image} />
