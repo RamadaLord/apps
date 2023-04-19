@@ -1,0 +1,10 @@
+#input {
+    display:inline-block;
+    position: relative
+}
+#input:after {
+    font-family: 'FontAwesome';
+    content: '✉';
+    position: absolute;
+    left: 6px;
+}
