@@ -5,6 +5,12 @@ import Image3 from '../../img/O_hobbit.jpg'
 
 function UncontrolledExample() {
   return (
+    <div>
+
+      <div className='h1-carrossel'>
+      <h1>Destaques</h1>
+
+      </div>
     <Carousel className='Carousel'>
       <Carousel.Item className='Carousel-item'>
         <img
@@ -44,6 +50,7 @@ function UncontrolledExample() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 }
 

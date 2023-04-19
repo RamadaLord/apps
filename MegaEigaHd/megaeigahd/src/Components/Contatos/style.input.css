@@ -1,8 +1,8 @@
-#input {
+.Input {
     display:inline-block;
     position: relative
 }
-#input:after {
+.Input:after {
     font-family: 'FontAwesome';
     content: '✉';
     position: absolute;

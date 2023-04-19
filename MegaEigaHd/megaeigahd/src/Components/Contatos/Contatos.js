@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './style.input.css'
 class Cadastro extends Component {
 
     constructor(props) {
@@ -32,6 +32,7 @@ class Cadastro extends Component {
                     <label>Nome:</label>
                     <input type="text"
                     id="Input"
+                    className="Input"
                         placeholder="Seu Nome Aqui"
                         value={this.state.nome}
                         onChange={(e) => this.setState({ nome: e.target.value })}

@@ -81,6 +81,16 @@ body {
 
 /*Carrossel*/
 
+.h1-carrossel{
+  border: solid red 1px;
+  text-align: center;
+  color: black;
+  background-color: cyan;
+  justify-content: center;
+  display: flex;
+  margin-top: 1rem;
+}
+
 .Carousel {
   left: -19%;
   position: relative;
@@ -88,8 +98,8 @@ body {
   width: 900px;
   opacity: 98%;
   height: 800px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   z-index: -1;
 }
 
