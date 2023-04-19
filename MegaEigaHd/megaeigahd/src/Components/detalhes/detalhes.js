@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import {useEffect, useState} from 'react'
+import Botaum from "../button/botao";
 import api from "../../services/api";
 import moment from "moment";
 
@@ -51,7 +52,7 @@ export default function Detalhes(){
                 src={`https://image.tmdb.org/t/p/w400/${filmes.backdrop_path}`}
                 alt={filmes.tittle}/>
                 <h3>
-
+            <Botaum/>
                 </h3>
             </div>
                 <h2 className="des2">Details : {filmes.overview}</h2>

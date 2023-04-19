@@ -82,10 +82,10 @@ body {
 /*Carrossel*/
 
 .h1-carrossel{
-  border: solid red 1px;
+  /* border: solid red 1px; */
   text-align: center;
-  color: black;
-  background-color: cyan;
+  color: blueviolet;
+  /* background-color: cyan; */
   justify-content: center;
   display: flex;
   margin-top: 1rem;
