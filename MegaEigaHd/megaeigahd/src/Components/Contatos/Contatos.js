@@ -33,7 +33,7 @@ class Cadastro extends Component {
                     <input type="text"
                     id="Input"
                     className="Input"
-                        placeholder="Seu Nome Aqui"
+                        placeholder="👥 Seu Nome Aqui"
                         value={this.state.nome}
                         onChange={(e) => this.setState({ nome: e.target.value })}
                     />
@@ -42,7 +42,7 @@ class Cadastro extends Component {
                     <input type='email'
                     id="Input"
                         value={this.state.email}
-                        placeholder="E-mail"
+                        placeholder="✉ E-mail"
                         onChange={(e) => this.setState({ email: e.target.value })}
                     />
                     <br />
