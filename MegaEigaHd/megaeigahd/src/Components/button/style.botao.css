@@ -1,4 +1,4 @@
-.botao{
+.botao {
     border: 1px solid rgb(13, 155, 48);
     background-color: blueviolet;
     color: rgb(167, 153, 136);
@@ -9,7 +9,7 @@
     width: 200px;
 }
 
-.botao:hover{
+.botao:hover {
     transition: 0.5s all;
     scale: 1.075;
     /* transform:rotate(40000000000000000154163561865deg); */
