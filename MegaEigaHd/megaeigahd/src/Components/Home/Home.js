@@ -18,26 +18,26 @@ export default function Home() {
 
       <div className="img">
         <div className="imge1">
-          <Link to="https://www.primevideo.com/">
+          <Link to="https://www.primevideo.com/" target='blank'>
             <img className="image1" src={ImageP} alt={ImageP} />
           </Link>
-          <Link to="https://www.starplus.com/pt-br/">
+          <Link to="https://www.starplus.com/pt-br/" target='blank'>
             <img className="image2" src={ImageD} alt={ImageD} />
           </Link>
         </div>
         <div className="imge2">
-          <Link className="image" to="https://www.hbomax.com/br/pt">
+          <Link className="image" to="https://www.hbomax.com/br/pt" target='blank'>
             <img className="image3" src={ImageH} alt={ImageH} />
           </Link>
-          <Link to="https://www.netflix.com/br/">
+          <Link to="https://www.netflix.com/br/" target='blank'>
             <img className="image4" src={ImageN} alt={ImageN} />
           </Link>
         </div>
         <div className="imge5">
-          <Link to="https://www.telecine.com.br">
+          <Link to="https://www.telecine.com.br" target='blank'>
             <img className="image5" src={ImageT} alt={ImageT} />
           </Link>
-          <Link to="https://globoplay.globo.com">
+          <Link to="https://globoplay.globo.com" target='blank'>
             <img className="image6" src={ImageG} alt={ImageG} />
           </Link>
       </div>
