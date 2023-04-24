@@ -18,7 +18,7 @@ export default function Emcartaz() {
     loadFilmes();
   }, [filmes]);
 
-  console.log(filmes);
+  //console.log(filmes);
 
   return (
     <div className="api-content">

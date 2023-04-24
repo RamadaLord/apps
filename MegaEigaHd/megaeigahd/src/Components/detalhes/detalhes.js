@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import '../../Components/button/style.botao.css'
+import "../../Components/button/style.botao.css";
 import api from "../../services/api";
 import moment from "moment";
 
@@ -15,31 +15,31 @@ export default function Detalhes() {
         params: {
           api_key: "35f672447b37987d3a6ab0b0adf8cc96",
           language: "en",
-          page: 1,
+          // page: 1,
         },
       });
       setFilme(response.data);
       setFilmes(response.data.production_companies);
     }
-    console.log(filmes);
     loadFilmeDetails();
   }, []);
 
   function salvarFilmes() {
-    const minhaLista = localStorage.getItem("@filmesfavoritos")
-    let filmesSalvos = JSON.parse(minhaLista) || []
+    const minhaLista = localStorage.getItem("@filmesfavoritos");
+    let filmesSalvos = JSON.parse(minhaLista) || [];
 
-    const verificarFilme = filmesSalvos.some(
-      (filmesSalvos) => filmesSalvos.id === filme.id
-    )
 
-    if (verificarFilme) {
-      alert("Filme Ja Esta Na Lista")
+    const verificarFilmes = filmesSalvos.some(
+      (filmesSalvos) => filmesSalvos.id === filmes.id
+      );
+
+    if (verificarFilmes) {
+      alert("Filme Ja Esta Na Lista");
 
       return;
     }
 
-    filmesSalvos.push(filme);
+    filmesSalvos.push(filmes);
 
     localStorage.setItem("@filmesfavoritos", JSON.stringify(filmesSalvos));
 
@@ -51,7 +51,6 @@ export default function Detalhes() {
       <h1 className="des2">
         Movie : {filmes.title}
         <br />
-        
         {moment(new Date(`${filmes.release_date}`)).format("DD-MM-YYYY")}
         <br />
         Popularity:
@@ -62,7 +61,7 @@ export default function Detalhes() {
       <div className="api-api">
         {filme.map((det) => {
           return (
-            <div>
+            <div key={det.id}>
               <h1>Studio:{det.name}</h1>
             </div>
           );
