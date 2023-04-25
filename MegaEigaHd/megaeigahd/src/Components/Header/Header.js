@@ -26,6 +26,12 @@ export default function Header() {
                         <Link className='link' to='/Estreias'>Estreias</Link>
                     </div>
                 </div>
+                <div>
+                    <Link to="/Favoritos">
+                    
+                    Favoritos
+                    </Link>
+                </div>
                 
                 <div className="dropdown">
                     <a href="#">Series</a>
