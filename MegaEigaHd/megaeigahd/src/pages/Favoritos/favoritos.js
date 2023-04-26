@@ -1,32 +1,49 @@
 import { useState, useEffect } from "react";
-import api from "../../services/api";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../../Components/css/style.fav.css";
+import '../../Components/css/style.index.css'
 
 export default function Favoritos() {
-  const { id } = useParams();
-  const [filmes, setFilmes] = useState([]);
+  const [filme, setFilmes] = useState([]);
   useEffect(() => {
     const minhaLista = localStorage.getItem("@filmesfavoritos");
     setFilmes(JSON.parse(minhaLista) || []);
   }, []);
 
-  useEffect(() => {
-    async function loadFilmeDetails() {
-      const response = await api.get(`/movie/${id}`, {
-        params: {
-          api_key: "35f672447b37987d3a6ab0b0adf8cc96",
-          language: "en",
-          // page: 1,
-        },
-      });
-      setFilmes(response.data);
-    }
-    loadFilmeDetails();
-  }, []);
+  function excluirFilme(id) {
+    let filtroFilme = filme.filter((filme) => {
+      return filme.id !== id;
+    });
+
+    setFilmes(filtroFilme);
+    localStorage.setItem("@filmesfavoritos", JSON.stringify(filtroFilme));
+  }
 
   return (
     <div>
-      <h1>Favoritos</h1>
+      <ul>
+        {filme.map((filme) => {
+          return (
+            <div className="Fav">
+              <br />
+              <article key={filme.id}>
+                <strong>{filme.title}</strong>
+                <img
+                  src={`https://image.tmdb.org/t/p/w400/${filme.backdrop_path}`}
+                  alt={filme.tittle}
+                />
+                <button className="botao">
+                  <Link to={`/Detalhes/${filme.id}`}>Detalhes</Link>
+                </button>
+
+                <br />
+
+                <button  className="botao" onClick={() => excluirFilme(filme.id)}>EXCLUIR</button>
+              </article>
+            </div>
+          );
+        })}
+      </ul>
     </div>
   );
 }

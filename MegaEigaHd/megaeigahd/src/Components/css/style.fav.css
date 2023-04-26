@@ -1,0 +1,31 @@
+.Fav{
+    color: rgb(35, 41, 46);
+    display: grid;
+    display: inline-block;
+    grid-template-columns: 5% 90% 5%;
+    justify-content: center;
+    /* padding: 10px; */
+    margin: 15px;
+    gap: 5px; 
+    background-color: blueviolet;
+    text-align: center;
+    box-shadow: 10px 5px 16px 20px rgb(46, 46, 58);
+    z-index: -2;
+    border: 3px solid rgb(0, 0, 0);
+    width: 406px;  }
+
+    .Fav img{
+        width: auto;
+    }
+
+    .Fav button{
+        border-color: black;
+        background-color: rgb(46, 46, 58);
+        margin: 8px;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+    .Fav a{
+        text-decoration: none;
+    }
