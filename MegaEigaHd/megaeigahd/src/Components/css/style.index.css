@@ -35,6 +35,7 @@ body {
   padding: 10px;
   margin: 10px;
   gap: 50px;
+  font-style: bold;
 }
 
 .img-api{
@@ -42,6 +43,14 @@ body {
   z-index: -2;
   border: 3px solid rgb(0, 0, 0);
   width: 406px;
+}
+
+.img-api1{
+  box-shadow: 10px 5px 16px 20px rgb(46, 46, 58);
+  z-index: -2;
+  border: 3px solid rgb(0, 0, 0);
+  width: 406px;
+  height: 600px;
 }
 
 .api-api{

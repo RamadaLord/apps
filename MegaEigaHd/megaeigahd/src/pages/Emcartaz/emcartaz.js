@@ -28,7 +28,7 @@ export default function Emcartaz() {
             <article>
               <strong className="api-api">{filmes.title}</strong>
               <img
-                className="img-api"
+                className="img-api1"
                 src={`https://image.tmdb.org/t/p/w400/${filmes.poster_path}`}
                 alt={filmes.tittle}
               />

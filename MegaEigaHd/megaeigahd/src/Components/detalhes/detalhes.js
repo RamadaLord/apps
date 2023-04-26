@@ -51,12 +51,16 @@ export default function Detalhes() {
       <h1 className="des2">
         Movie : {filmes.title}
         <br />
+        Release:
         {moment(new Date(`${filmes.release_date}`)).format("DD-MM-YYYY")}
         <br />
         Popularity:
         {filmes.popularity}
         <br />
-        TMDB: ★{Number(filmes.vote_average).toFixed(1)}
+        
+          TMDB:★
+          
+         {Number(filmes.vote_average).toFixed(1)}
       </h1>
       <div className="api-api">
         {filme.map((det) => {
