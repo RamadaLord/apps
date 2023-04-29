@@ -1,13 +1,14 @@
 .footer{
     background-color: rgb(46, 46, 58);
     opacity: 94%;
-    
+  
     padding: 2rem ;
     text-align: center;
 }
 .pes{
     /* border: 3px solid palevioletred; */
     padding: 2rem;
+  
     text-align: end;
     color: aliceblue;
 }
