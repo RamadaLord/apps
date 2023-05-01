@@ -70,7 +70,7 @@ export default function Detalhes() {
         <br />
         Release:
         {moment(new Date(`${filmes.release_date}`)).format("DD-MM-YYYY")}
-        {moment(new Date(`${serie.first_air_date}`)).format("DD-MM-YYYY")}
+        {/* {moment(new Date(`${serie.first_air_date}`)).format("DD-MM-YYYY")} */}
         <br />
         Popularity:
         {filmes.popularity}

@@ -14,7 +14,7 @@ export default function Home() {
       <div className="imega">
         <UncontrolledExample />
       </div>
-      <div className="">
+      <div>
 
       <div className="img">
         <div className="imge1">
