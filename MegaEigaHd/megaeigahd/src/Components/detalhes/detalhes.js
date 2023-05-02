@@ -62,6 +62,27 @@ export default function Detalhes() {
 
     alert("Salvo");
   }
+  function salvarSeries() {
+    const minhaLista = localStorage.getItem("@seriesfavoritas");
+    let seriesSalvas = JSON.parse(minhaLista) || [];
+
+
+    const verificarSeries = seriesSalvas.some(
+      (seriesSalvas) => seriesSalvas.id === series.id
+      );
+
+    if (verificarSeries) {
+      alert("Serie Ja Esta Na Lista");
+
+      return;
+    }
+
+    seriesSalvas.push(series);
+
+    localStorage.setItem("@seriesfavoritas", JSON.stringify(seriesSalvas));
+
+    alert("Salvo");
+  }
 
   return (
     <div className="api-content">
@@ -90,6 +111,13 @@ export default function Detalhes() {
             </div>
           );
         })}
+        {/* {serie.map((det) => {
+          return (
+            <div key={det.id}>
+              <h1>Studio:{det.name}</h1>
+            </div>
+          );
+        })} */}
         <img
           className="img-api"
           src={`https://image.tmdb.org/t/p/w400/${filmes.backdrop_path}`} 
@@ -98,10 +126,10 @@ export default function Detalhes() {
         <img
           className="img-api"
           src={`https://image.tmdb.org/t/p/w400/${serie.backdrop_path}`}
-          alt={filmes.tittle}
+          alt={series.name}
         />
         <h3>
-          <button className="botao" onClick={salvarFilmes}>
+          <button className="botao" onClick={salvarFilmes || salvarSeries}>
             ★Favoritar★
           </button>
         </h3>
