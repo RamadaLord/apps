@@ -4,7 +4,9 @@ import "../../Components/css/style.fav.css";
 import '../../Components/css/style.index.css'
 
 export default function Favoritos() {
-  const [filme, setFilmes] = useState([]);
+  const [filme, setFilmes] = useState(['']);
+  const [serie, setSerie] = useState([''])
+
   useEffect(() => {
     const minhaLista = localStorage.getItem("@filmesfavoritos");
     setFilmes(JSON.parse(minhaLista) || []);
@@ -18,6 +20,20 @@ export default function Favoritos() {
     setFilmes(filtroFilme);
     localStorage.setItem("@filmesfavoritos", JSON.stringify(filtroFilme));
   }
+  //
+  useEffect(() => {
+    const minhaLista = localStorage.getItem("@seriesfavoritas");
+    setSerie(JSON.parse(minhaLista) || []);
+  }, []);
+
+  function excluirSerie(id) {
+    let filtroSerie = serie.filter((serie) => {
+      return serie.id !== id;
+    });
+
+    setSerie(filtroSerie);
+    localStorage.setItem("@seriesfavoritas", JSON.stringify(filtroSerie));
+  }
 
   return (
     <div>
@@ -29,7 +45,7 @@ export default function Favoritos() {
               <article key={filme.id}>
                 <strong>{filme.title}</strong>
                 <img
-                  src={`https://image.tmdb.org/t/p/w400/${filme.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/w400/${filme.backdrop_path || serie.backdrop_path }`}
                   alt={filme.tittle}
                 />
                 <button className="botao">
@@ -42,6 +58,26 @@ export default function Favoritos() {
               </article>
             </div>
           );
+        })}
+
+        {serie.map((serie) => {
+          return(
+            <div className="Fav">
+              <br/>
+              <article key={serie.id}>
+                <strong>{serie.name}</strong>
+                <img src={`https://image.tmdb.org/t/p/w400/${serie.backdrop_path}`} alt={serie.name} />
+                <button className="botao">
+                  <Link to={`/Detalhes/${serie.id}`}>Detalhes</Link>
+                </button>
+
+                <br />
+
+                <button  className="botao" onClick={() => excluirSerie(serie.id)}>EXCLUIR</button>
+              </article>
+
+            </div>
+          )
         })}
       </ul>
     </div>

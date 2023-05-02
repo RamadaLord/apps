@@ -87,10 +87,10 @@ export default function Detalhes() {
   return (
     <div className="api-content">
       <h1 className="des2">
-        Title : {filmes.title} {serie.name}
+        Title : {filmes.title || serie.name}
         <br />
         Release:
-        {moment(new Date(`${filmes.release_date}`)).format("DD-MM-YYYY")}
+        {moment(new Date(`${filmes.release_date || serie.first_air_date}`)).format("DD-MM-YYYY")}
         {/* {moment(new Date(`${serie.first_air_date}`)).format("DD-MM-YYYY")} */}
         <br />
         Popularity:
@@ -120,13 +120,8 @@ export default function Detalhes() {
         })} */}
         <img
           className="img-api"
-          src={`https://image.tmdb.org/t/p/w400/${filmes.backdrop_path}`} 
+          src={`https://image.tmdb.org/t/p/w400/${filmes.backdrop_path || serie.backdrop_path }`} 
           alt={filmes.tittle}
-        />
-        <img
-          className="img-api"
-          src={`https://image.tmdb.org/t/p/w400/${serie.backdrop_path}`}
-          alt={series.name}
         />
         <h3>
           <button className="botao" onClick={salvarFilmes || salvarSeries}>
@@ -134,7 +129,7 @@ export default function Detalhes() {
           </button>
         </h3>
       </div>
-      <h2 className="des2">Details : {filmes.overview}{serie.over}</h2>
+      <h2 className="des2">Details : {filmes.overview || serie.overview}</h2>
     </div>
   );
 }
