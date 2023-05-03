@@ -50,8 +50,10 @@ export default function Detalhes2() {
     <div className="api-content">
     <h1 className="des2">
       Title : {serie.name}
+      <br/>
+      Original Title: {serie.original_name}
       <br />
-      Airing Ep.:{serie.episode_run_time}
+      Eps.:{serie.number_of_episodes}
       <br/>
       Release:
       {moment(new Date(`${serie.first_air_date}`)).format("DD-MM-YYYY")}
@@ -72,6 +74,7 @@ export default function Detalhes2() {
           </div>
         );
       })} */}
+     
      
       <img
         className="img-api"
