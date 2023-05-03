@@ -38,6 +38,9 @@ export default function Favoritos() {
   return (
     <div>
       <ul>
+        <h1 className="Favh1">
+        🌟 Filmes Favoritos🌟
+        </h1>
         {filme.map((filme) => {
           return (
             <div className="Fav">
@@ -45,7 +48,7 @@ export default function Favoritos() {
               <article key={filme.id}>
                 <strong>{filme.title}</strong>
                 <img
-                  src={`https://image.tmdb.org/t/p/w400/${filme.backdrop_path || serie.backdrop_path }`}
+                  src={`https://image.tmdb.org/t/p/w400/${filme.backdrop_path }`}
                   alt={filme.tittle}
                 />
                 <button className="botao">
@@ -59,7 +62,9 @@ export default function Favoritos() {
             </div>
           );
         })}
-
+        <h1 className="Favh1">
+        🌟Series Favoritas🌟
+        </h1>
         {serie.map((serie) => {
           return(
             <div className="Fav">
@@ -68,7 +73,7 @@ export default function Favoritos() {
                 <strong>{serie.name}</strong>
                 <img src={`https://image.tmdb.org/t/p/w400/${serie.backdrop_path}`} alt={serie.name} />
                 <button className="botao">
-                  <Link to={`/Detalhes/${serie.id}`}>Detalhes</Link>
+                  <Link to={`/Detalhes2/${serie.id}`}>Detalhes</Link>
                 </button>
 
                 <br />

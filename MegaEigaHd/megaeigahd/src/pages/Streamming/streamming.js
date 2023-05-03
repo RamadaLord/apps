@@ -34,7 +34,7 @@ export default function Streamming(){
                     alt={Streamming.name}
                   />
                   {/* <strong className="api-api">{series.overview}</strong> */}
-                  <Link className="des" to={`/Detalhes/${Streamming.id}`}>Detalhes</Link>
+                  <Link className="des" to={`/Detalhes2/${Streamming.id}`}>Detalhes</Link>
                 </article>
               </div>
             );

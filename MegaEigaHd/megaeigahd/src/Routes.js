@@ -11,9 +11,11 @@ import PopularesSeries from './pages/PopularesSeries/PopularesSeries'
 import Exibidos from './pages/ExibirHoje/exibirhoje'
 
 import Detalhes from './Components/detalhes/detalhes'
+import Detalhes2 from './Components/detalhes/detalhes2'
 import Favoritos from './pages/Favoritos/favoritos'
 
 import Footer from './Components/footer/footer'
+
 
 
 
@@ -34,6 +36,8 @@ function Rotas() {
                 <Route path='/Streamming' element={<Streamming />} />
                 <Route path='/popularesSeries' element={<PopularesSeries />} />
                 <Route path='/Exibidos' element={<Exibidos />} />
+
+                <Route path='/Detalhes2/:id' element={< Detalhes2 />} />
 
                 <Route path='/Detalhes/:id' element={< Detalhes/>} />
                 <Route path='*' element={< Detalhes/>} />

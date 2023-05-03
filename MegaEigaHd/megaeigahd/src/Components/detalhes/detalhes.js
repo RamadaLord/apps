@@ -8,8 +8,6 @@ export default function Detalhes() {
   const { id } = useParams();
   const [filmes, setFilme] = useState({}); //chama de objeto//
   const [filme, setFilmes] = useState(['']);
-  const [series, setSeries] = useState({})
-  const [serie, setSerie] = useState ([''])
   
     useEffect(() => {
       async function loadFilmeDetails() {
@@ -26,20 +24,7 @@ export default function Detalhes() {
       loadFilmeDetails();
     }, []);
   
-    useEffect(() => {
-      async function loadSeriesDetails() {
-        const response = await api.get(`/tv/${id}`, {
-          params: {
-            api_key: "35f672447b37987d3a6ab0b0adf8cc96",
-            language: "en",
-            // page: 1,
-          },
-        });
-        setSerie(response.data);
-        setSeries(response.data.production_companies);
-      }
-      loadSeriesDetails();
-    }, []);
+    
   
   function salvarFilmes() {
     const minhaLista = localStorage.getItem("@filmesfavoritos");
@@ -60,48 +45,28 @@ export default function Detalhes() {
 
     localStorage.setItem("@filmesfavoritos", JSON.stringify(filmesSalvos));
 
-    alert("Salvo");
+    alert("Filme Salvo");
   }
-  function salvarSeries() {
-    const minhaLista = localStorage.getItem("@seriesfavoritas");
-    let seriesSalvas = JSON.parse(minhaLista) || [];
-
-
-    const verificarSeries = seriesSalvas.some(
-      (seriesSalvas) => seriesSalvas.id === series.id
-      );
-
-    if (verificarSeries) {
-      alert("Serie Ja Esta Na Lista");
-
-      return;
-    }
-
-    seriesSalvas.push(series);
-
-    localStorage.setItem("@seriesfavoritas", JSON.stringify(seriesSalvas));
-
-    alert("Salvo");
-  }
+ 
 
   return (
     <div className="api-content">
       <h1 className="des2">
-        Title : {filmes.title || serie.name}
+        Title : {filmes.title}
         <br />
         Release:
-        {moment(new Date(`${filmes.release_date || serie.first_air_date}`)).format("DD-MM-YYYY")}
-        {/* {moment(new Date(`${serie.first_air_date}`)).format("DD-MM-YYYY")} */}
+        {moment(new Date(`${filmes.release_date}`)).format("DD-MM-YYYY")}
+       
         <br />
         Popularity:
         {filmes.popularity}
-        {serie.popularity}
+       
         <br />
         
           TMDB:★
           
          {Number(filmes.vote_average).toFixed(1)}
-         {Number(serie.vote_average).toFixed(1)}
+        
       </h1>
       <div className="api-api">
         {filme.map((det) => {
@@ -120,16 +85,16 @@ export default function Detalhes() {
         })} */}
         <img
           className="img-api"
-          src={`https://image.tmdb.org/t/p/w400/${filmes.backdrop_path || serie.backdrop_path }`} 
+          src={`https://image.tmdb.org/t/p/w400/${filmes.backdrop_path }`} 
           alt={filmes.tittle}
         />
         <h3>
-          <button className="botao" onClick={salvarFilmes || salvarSeries}>
+          <button className="botao" onClick={salvarFilmes}>
             ★Favoritar★
           </button>
         </h3>
       </div>
-      <h2 className="des2">Details : {filmes.overview || serie.overview}</h2>
+      <h2 className="des2">Details : {filmes.overview}</h2>
     </div>
   );
 }

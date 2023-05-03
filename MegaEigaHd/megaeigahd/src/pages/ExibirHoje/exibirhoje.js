@@ -35,7 +35,7 @@ export default function Exibidos(){
                     alt={seriesHj.name}
                   />
                   {/* <strong className="api-api">{series.overview}</strong> */}
-                  <Link className="des" to={`/Detalhes/${seriesHj.id}`}>Detalhes</Link>
+                  <Link className="des" to={`/Detalhes2/${seriesHj.id}`}>Detalhes</Link>
                 </article>
               </div>
             );

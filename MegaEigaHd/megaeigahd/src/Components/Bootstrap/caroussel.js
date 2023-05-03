@@ -7,7 +7,7 @@ function UncontrolledExample() {
   return (
     <div>
 
-      <div className='h1-carrossel'>
+      <div className='Favh1'>
       <h1>Destaques</h1>
 
       </div>

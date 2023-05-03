@@ -35,7 +35,7 @@ export default function PopularesSeries(){
                   alt={series.tittle}
                 />
                 {/* <strong className="api-api">{series.overview}</strong> */}
-                <Link className="des" to={`/Detalhes/${series.id}`}>Detalhes</Link>
+                <Link className="des" to={`/Detalhes2/${series.id}`}>Detalhes</Link>
               </article>
             </div>
           );
