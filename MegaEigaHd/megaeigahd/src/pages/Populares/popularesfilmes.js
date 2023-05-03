@@ -36,6 +36,7 @@ export default function PopularesFilmes(){
                     {/* <strong className="api-api">{series.overview}</strong> */}
                     <Link className="des" to={`/Detalhes/${filmespop.id}`}>Detalhes</Link>
                   </article>
+                  
                 </div>
               );
             })}
