@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom'
-
+import Spinner from 'react-bootstrap/Spinner'
 export default function PopularesFilmes(){
     
         const [filmespop, setFilmespop] = useState([""]);
+        const [loading, setLoading] = useState(true)
+
 
         useEffect(() => {
           async function loadFilmes() {
@@ -15,9 +17,23 @@ export default function PopularesFilmes(){
               },
             });
             setFilmespop(response.data.results);
+            setLoading(false)
           }
           loadFilmes();
         }, [filmespop]);
+
+        if (loading){
+         return (
+           <div>
+             <div>
+               <h1>Carregando</h1>
+             </div>
+             <div>
+               <Spinner animation="border" variant="secondary"/>
+             </div>
+           </div>
+         )
+        }
       
         //console.log(filmes);
       

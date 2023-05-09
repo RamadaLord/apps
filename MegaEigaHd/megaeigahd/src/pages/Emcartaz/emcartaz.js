@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 export default function Emcartaz() {
-                                                     //array de string vazia//
+  //array de string vazia//
   const [filmes, setFilmes] = useState([""]);
 
   useEffect(() => {
@@ -33,12 +33,13 @@ export default function Emcartaz() {
                 alt={filmes.tittle}
               />
               {/* <strong className="api-api">{filmes.overview}</strong> */}
-              <Link className="des" to={`/Detalhes/${filmes.id}`}>Detalhes</Link>
+              <Link className="des" to={`/Detalhes/${filmes.id}`}>
+                Detalhes
+              </Link>
             </article>
           </div>
         );
       })}
-      
     </div>
   );
 }
