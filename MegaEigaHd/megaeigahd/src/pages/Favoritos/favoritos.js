@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../Components/css/style.fav.css";
 import '../../Components/css/style.index.css'
+import Spinner from 'react-bootstrap/Spinner'
 
 export default function Favoritos() {
   const [filme, setFilmes] = useState(['']);
   const [serie, setSerie] = useState([''])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const minhaLista = localStorage.getItem("@filmesfavoritos");
     setFilmes(JSON.parse(minhaLista) || []);
   }, []);
+  
 
   function excluirFilme(id) {
     let filtroFilme = filme.filter((filme) => {
@@ -18,6 +21,8 @@ export default function Favoritos() {
     });
 
     setFilmes(filtroFilme);
+    
+
     localStorage.setItem("@filmesfavoritos", JSON.stringify(filtroFilme));
   }
   //
@@ -32,8 +37,24 @@ export default function Favoritos() {
     });
 
     setSerie(filtroSerie);
+    
+
     localStorage.setItem("@seriesfavoritas", JSON.stringify(filtroSerie));
   }
+
+  
+  // if (loading){
+  //   return (
+  //     <div className="spinner">
+  //       <div>
+  //         <h1>Carregando</h1>
+  //       </div>
+  //       <div>
+  //         <Spinner animation="border" variant="secondary"/>
+  //       </div>
+  //     </div>
+  //   )
+  //  }
 
   return (
     <div>

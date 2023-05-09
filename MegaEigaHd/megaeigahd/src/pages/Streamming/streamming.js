@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom'
+import Spinner from 'react-bootstrap/Spinner'
 
 export default function Streamming(){
 
     const [Streamming, setStreamming] = useState([""]);
-
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         async function loadFilmes() {
           const response = await api.get("/tv/on_the_air", {
@@ -15,9 +16,24 @@ export default function Streamming(){
             },
           });
           setStreamming  (response.data.results);
+          setLoading(false)
         }
         loadFilmes();
       }, [Streamming]);
+
+      
+      if (loading){
+        return (
+          <div className="spinner">
+            <div>
+              <h1>Carregando</h1>
+            </div>
+            <div>
+              <Spinner animation="border" variant="secondary"/>
+            </div>
+          </div>
+        )
+       }
     
       //console.log(filmes);
     

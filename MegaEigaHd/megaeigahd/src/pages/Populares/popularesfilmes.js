@@ -24,7 +24,7 @@ export default function PopularesFilmes(){
 
         if (loading){
          return (
-           <div>
+           <div className="spinner">
              <div>
                <h1>Carregando</h1>
              </div>

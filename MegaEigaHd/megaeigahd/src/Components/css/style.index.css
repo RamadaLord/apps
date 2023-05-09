@@ -314,3 +314,14 @@ body {
   padding: 10px;
   margin: 10px;
 }
+
+/*Spinner*/
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}

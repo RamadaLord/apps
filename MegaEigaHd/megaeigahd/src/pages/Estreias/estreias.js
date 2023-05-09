@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom'
+import Spinner from 'react-bootstrap/Spinner'
 
 
 export default function Estreias() {
   const [filmesUp, setFilmesUp] = useState([""]);
+  const [loading, setLoading] = useState(true)
 
         useEffect(() => {
           async function loadFilmes() {
@@ -15,10 +17,25 @@ export default function Estreias() {
               },
             });
             setFilmesUp(response.data.results);
+            setLoading(false)
           }
           loadFilmes();
         }, [filmesUp]);
       
+
+        if (loading){
+          return (
+            <div className="spinner">
+              <div>
+                <h1>Carregando</h1>
+              </div>
+              <div>
+                <Spinner animation="border" variant="secondary"/>
+              </div>
+            </div>
+          )
+         }
+
         //console.log(filmes);
       
         return (
