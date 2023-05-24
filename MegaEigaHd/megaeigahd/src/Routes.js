@@ -27,6 +27,7 @@ function Rotas() {
         <BrowserRouter>
             <Header />
             <Routes>
+               
                 <Route path='/' element={<Home />} />
                 <Route path='/Emcartaz' element={<Emcartaz />} />
                 <Route path='/Popularesfilmes' element={<PopularesFilmes />} />
@@ -41,7 +42,7 @@ function Rotas() {
 
                 <Route path='/Detalhes/:id' element={< Detalhes/>} />
                 <Route path='*' element={< Detalhes/>} />
-
+             
             </Routes>
             <br/>
             <Footer/>

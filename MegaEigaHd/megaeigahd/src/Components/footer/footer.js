@@ -5,13 +5,13 @@ export default function Footer(){
     return(
         <div className='footer'>
             <footer>
-                <Link to='/' name="top">
+                <Link to='/'>
                 <img className='F-img' src={image} alt={image}/>
                 </Link>
                 <div  className='pes'>
 
                 Copyright©
-                <Link to="https://github.com/RamadaLord" target='blank'>
+                <Link to="https://github.com/RamadaLord">
                 :RamadaLord
                 </Link>
                 </div>
@@ -19,4 +19,3 @@ export default function Footer(){
         </div>
     )
 }
-
