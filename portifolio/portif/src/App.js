@@ -1,10 +1,9 @@
-
+import './components/css/style.img.css'
+import './components/js/input'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
+    <div>
+     
     </div>
   );
 }
