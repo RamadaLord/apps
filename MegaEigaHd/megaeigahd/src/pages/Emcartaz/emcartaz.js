@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import { Link } from "react-router-dom";
+import Spinner from 'react-bootstrap/Spinner'
 export default function Emcartaz() {
   //array de string vazia//
   const [filmes, setFilmes] = useState([""]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function loadFilmes() {
@@ -13,10 +15,24 @@ export default function Emcartaz() {
           language: "en",
         },
       });
+      setLoading(false)
       setFilmes(response.data.results);
     }
     loadFilmes();
   }, [filmes]);
+
+  if (loading){
+    return (
+      <div className="spinner">
+        <div>
+          <h1>Carregando</h1>
+        </div>
+        <div>
+          <Spinner animation="border" variant="secondary"/>
+        </div>
+      </div>
+    )
+   }
 
   //console.log(filmes);
 
