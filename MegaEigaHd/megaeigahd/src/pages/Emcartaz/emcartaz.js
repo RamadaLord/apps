@@ -19,6 +19,7 @@ export default function Emcartaz() {
       setFilmes(response.data.results);
     }
     loadFilmes();
+    
   }, [filmes]);
 
   if (loading){
